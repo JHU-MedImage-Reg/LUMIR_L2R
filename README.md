@@ -17,7 +17,7 @@ The challenge is dedicated to ***unsupervised*** brain MRI image registration an
 Training dataset
 
 ### Citations:
-The OpenBHB dataset was curated and created for an independent study. The preprocessed dataset is under CC license. If you use this dataset in your research, please cite the following papers:
+The OpenBHB dataset was initially curated for an independent study. Our team has preprocessed this dataset for use in a prior image registration study. The dataset is available under a CC license. Should you use this dataset in your research, we kindly request that you cite the following papers:
 
 ***OpenBHB:***
 
@@ -31,7 +31,7 @@ The OpenBHB dataset was curated and created for an independent study. The prepro
     publisher={Elsevier}
     }
 
-The part of evaluation dataset was obtained from AFIDs-OASIS dataset, please cite the following paper if you have used this dataset in the evaluation (i.e., if you have participated in the L2R challenge):
+A portion of the evaluation dataset was sourced from the AFIDs-OASIS dataset. If this dataset was used in your evaluation, such as participating in the L2R challenge, please cite the following paper in your work:
 
 ***AFIDs-OASIS:***
 
