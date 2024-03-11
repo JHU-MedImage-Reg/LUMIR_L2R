@@ -4,11 +4,11 @@ The challenge is dedicated to ***unsupervised*** brain MRI image registration an
 
 Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-challenge.org/) for more information.
 
-### Dataset: 
-Training dataset
-- ***Preprocessing:*** The OpenBHB dataset was first preprocessed, including skull-stripping and affine registration, by the dataset creators. For details, please see [OpenBHB GitHub](https://baobablab.github.io/bhb/dataset) page and their [publication](https://www.sciencedirect.com/science/article/pii/S1053811922007522). We then applied N4 bias correction using ITK and intensity normalization using a [pre-existing tool](https://github.com/jcreinhold/intensity-normalization). 
-- ***Image size:*** Each image and label map has a size of `160 x 192 x 224`.
-- ***Normalization:*** The intensity values of each image volume are normalized into a range `[0,1]`.
+## Dataset: 
+- ***Download Training Dataset:*** Access the training dataset via Google Drive.
+- ***Preprocessing:*** The OpenBHB dataset underwent initial preprocessing by its creators, which included skull stripping and affine registration. For comprehensive details, refer to the [OpenBHB GitHub](https://baobablab.github.io/bhb/dataset) page and their [article](https://www.sciencedirect.com/science/article/pii/S1053811922007522). Subsequently, we performed N4 bias correction with ITK and intensity normalization utilizing a [pre-existing tool](https://github.com/jcreinhold/intensity-normalization). 
+- ***Image size:*** The dimensions of each image are `160 x 192 x 224`.
+- ***Normalization:*** Intensity values for each image volume have been normalized to fall within the range `[0,255]`.
 - ***Dataset structure:***
     ```bash
     LUMIR_data/Train/------
@@ -21,22 +21,22 @@ Training dataset
             .......
     ```
 
-### Baseline methods:
+## Baseline methods:
 1. VFA
 2. TransMorph
 3. VoxelMorph
 5. DeedsBCV
 
-### Evaluation metrics:
+## Evaluation metrics:
 1. TRE
 2. Dice
 3. Non-diffeomorphic volumes
 
-### Pre-trained model weights
+## Pre-trained model weights
 1. TransMorph
 
 
-### Citations:
+## Citations:
 The OpenBHB dataset was initially curated for an independent study. Our team has preprocessed this dataset for use in a prior image registration study. The dataset is available under a CC license. Should you use this dataset in your research, we kindly request that you cite the following papers:
 
 ***OpenBHB:***
