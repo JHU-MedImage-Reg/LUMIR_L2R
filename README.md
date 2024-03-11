@@ -31,7 +31,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 ## Evaluation metrics:
 1. TRE
 2. Dice
-3. **Non-diffeomorphic volumes** [*See this article published in IJCV*](https://arxiv.org/abs/2212.06060) 
+3. **Non-diffeomorphic volumes** *See this [article](https://arxiv.org/abs/2212.06060) published in IJCV, and its associated [GitHub papge](https://github.com/yihao6/digital_diffeomorphism)*
 
 ## Pre-trained model weights
 1. TransMorph
@@ -78,4 +78,13 @@ A portion of the evaluation dataset was sourced from the AFIDs-OASIS dataset. If
     pages={1498--1507},
     year={2007},
     publisher={MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info~…}
+    }
+
+If you have used **Non-diffeomorphic volumes** in the evaluation of the deformation regularity, please cite the following:
+
+    @article{liu2022finite,
+    title={On finite difference jacobian computation in deformable image registration},
+    author={Liu, Yihao and Chen, Junyu and Wei, Shuwen and Carass, Aaron and Prince, Jerry},
+    journal={arXiv preprint arXiv:2212.06060},
+    year={2022}
     }
