@@ -30,7 +30,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 ## Evaluation metrics:
 1. TRE
 2. Dice
-3. Non-diffeomorphic volumes
+3. **Non-diffeomorphic volumes** [*See this article published in IJCV*](https://arxiv.org/abs/2212.06060) 
 
 ## Pre-trained model weights
 1. TransMorph
