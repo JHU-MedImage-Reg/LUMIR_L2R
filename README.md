@@ -25,7 +25,8 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 ## Baseline methods:
 1. VFA
 2. TransMorph
-3. VoxelMorph
+3. SynthMorph
+4. VoxelMorph
 5. DeedsBCV
 
 ## Evaluation metrics:
