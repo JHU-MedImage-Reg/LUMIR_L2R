@@ -39,7 +39,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 
 ## Citations:
-The OpenBHB dataset was initially curated for an independent study. Our team has preprocessed this dataset for use in a prior image registration study. The dataset is available under a CC license. Should you use this dataset in your research, we kindly request that you cite the following papers:
+The OpenBHB dataset was initially curated for an independent study. Our team has preprocessed this dataset for use in this challenge. The dataset is available under a CC license. Should you use this dataset in your research, we kindly request that you cite the following paper:
 
 ***OpenBHB:***
 
