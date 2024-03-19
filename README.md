@@ -28,6 +28,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 3. SynthMorph
 4. VoxelMorph
 5. DeedsBCV
+6. UniGradICON
 
 ## Evaluation metrics:
 1. TRE
@@ -36,6 +37,8 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 ## Pre-trained model weights
 1. TransMorph
+2. VFA
+3. VoxelMorph
 
 
 ## Citations:
