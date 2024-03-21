@@ -13,12 +13,12 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 - ***Dataset structure:***
     ```bash
     LUMIR_data/Train/------
-            subject_0001.nii.gz   <--- a brain T1 MR image
-            subject_0002.nii.gz
+            image_0000.nii.gz   <--- a brain T1 MR image
+            image_0001.nii.gz
             .......
     LUMIR_data/Val/------
-            subject_000x.nii.gz
-            subject_000x.nii.gz
+            image_3384.nii.gz
+            image_3385.nii.gz
             .......
     ```
 
