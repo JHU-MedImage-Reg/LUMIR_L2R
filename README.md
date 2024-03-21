@@ -41,10 +41,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 3. VoxelMorph
 
 
-## Citations:
-The OpenBHB dataset was initially curated for an independent study. Our team has preprocessed this dataset for use in this challenge. The dataset is available under a CC license. Should you use this dataset in your research, we kindly request that you cite the following paper:
-
-***OpenBHB:***
+## Citations for dataset usage:
 
     @article{dufumier2022openbhb,
     title={Openbhb: a large-scale multi-site brain mri data-set for age prediction and debiasing},
@@ -56,10 +53,6 @@ The OpenBHB dataset was initially curated for an independent study. Our team has
     publisher={Elsevier}
     }
 
-A portion of the evaluation dataset was sourced from the AFIDs-OASIS dataset. If this dataset was used in your evaluation, such as participating in the L2R challenge, please cite the following paper in your work:
-
-***AFIDs-OASIS:***
-
     @article{taha2023magnetic,
     title={Magnetic resonance imaging datasets with anatomical fiducials for quality control and registration},
     author={Taha, Alaa and Gilmore, Greydon and Abbass, Mohamad and Kai, Jason and Kuehn, Tristan and Demarco, John and Gupta, Geetika and Zajner, Chris and Cao, Daniel and Chevalier, Ryan and others},
@@ -70,9 +63,7 @@ A portion of the evaluation dataset was sourced from the AFIDs-OASIS dataset. If
     year={2023},
     publisher={Nature Publishing Group UK London}
     }
-
-***OASIS:***
-  
+    
     @article{marcus2007open,
     title={Open Access Series of Imaging Studies (OASIS): cross-sectional MRI data in young, middle aged, nondemented, and demented older adults},
     author={Marcus, Daniel S and Wang, Tracy H and Parker, Jamie and Csernansky, John G and Morris, John C and Buckner, Randy L},
