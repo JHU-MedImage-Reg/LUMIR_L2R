@@ -93,8 +93,6 @@ def main():
         loss_all = utils.AverageMeter()
         idx = 0
         for data in train_loader:
-            if idx >5:
-                break
             idx += 1
             model.train()
             adjust_learning_rate(optimizer, epoch, max_epoch, lr)
