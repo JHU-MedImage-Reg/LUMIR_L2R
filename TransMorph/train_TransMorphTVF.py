@@ -73,7 +73,7 @@ def main():
     '''
     Initialize training
     '''
-    train_set = datasets.OpenBHBBrainDataset(data_path=train_dir, transforms=None)
+    train_set = datasets.L2RLUMIRDataset(data_path=train_dir, stage='train')
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
 
     optimizer = optim.AdamW(model.parameters(), lr=updated_lr, weight_decay=0, amsgrad=True)
