@@ -5,7 +5,7 @@ The challenge is dedicated to ***unsupervised*** brain MRI image registration an
 Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-challenge.org/) for more information.
 
 ## Dataset: 
-- ***Download Training Dataset:*** Access the training dataset via Google Drive (TBA).
+- ***Download Training Dataset:*** Access the training dataset via Google Drive ([~52GB](https://drive.google.com/uc?export=download&id=1PTHAX9hZX7HBXXUGVvI1ar1LUf4aVbq9)).
 - ***Preprocessing:*** The OpenBHB dataset underwent initial preprocessing by its creators, which included skull stripping and affine registration. For comprehensive details, refer to the [OpenBHB GitHub](https://baobablab.github.io/bhb/dataset) page and their [article](https://www.sciencedirect.com/science/article/pii/S1053811922007522). Subsequently, we performed N4 bias correction with ITK and intensity normalization using a [pre-existing tool](https://github.com/jcreinhold/intensity-normalization).
 - ***Annotation:*** We conducted segmentation of the anatomical structures using automated software. To enhance the dataset for evaluation purposes, an experienced radiologist and neurologist contributed manual landmark annotations to a subset of the images.
 - ***Image size:*** The dimensions of each image are `160 x 224 x 192`.
@@ -15,7 +15,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 ## Baseline methods:
 1. VFA
-2. TransMorph ([Pretrained weights (~355MB)](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry))
+2. [TransMorph](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration) ([Pretrained weights (~355MB)](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry))
 3. SynthMorph
 4. VoxelMorph
 5. DeedsBCV
@@ -25,12 +25,6 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 1. TRE
 2. Dice
 3. **Non-diffeomorphic volumes** *See this [article](https://arxiv.org/abs/2212.06060) published in IJCV, and its associated [GitHub papge](https://github.com/yihao6/digital_diffeomorphism)*
-
-## Pre-trained model weights
-1. TransMorph
-2. VFA
-3. VoxelMorph
-
 
 ## Citations for dataset usage:
 
