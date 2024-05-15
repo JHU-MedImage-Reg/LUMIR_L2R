@@ -133,10 +133,9 @@ def main():
         print('Epoch {} loss {:.4f}'.format(epoch, loss_all.avg))
 
         save_checkpoint({
-            'epoch': epoch + 1,
             'state_dict': model.state_dict(),
             'optimizer': optimizer.state_dict(),
-        }, save_dir='experiments/'+save_dir, filename='transmorph_wts.pth.tar'.format(loss_all.avg))
+        }, save_dir='experiments/'+save_dir, filename='transmorph_wts.pth.tar')
 
         grid_img = mk_grid_img(8, 1)
         def_grid = spatial_trans(grid_img.float(), flow.cuda())
