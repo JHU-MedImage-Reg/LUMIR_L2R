@@ -15,7 +15,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 ## Baseline methods:
 1. VFA
-2. TransMorph ([Pretrained weights (~355MB)](https://drive.google.com/uc?export=download&id=1UjPR8LGeRjh4I_c1gMq2637-xKTuo57a))
+2. TransMorph ([Pretrained weights (~355MB)](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry))
 3. SynthMorph
 4. VoxelMorph
 5. DeedsBCV
