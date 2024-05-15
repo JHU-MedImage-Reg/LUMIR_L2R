@@ -27,7 +27,7 @@ class Logger(object):
 def main():
     batch_size = 1
     weights = [1, 1] # loss weights
-    train_dir = 'G:/DATA/L2R24_LUMIR/train/'
+    train_dir = 'G:/DATA/LUMIR/'
     save_dir = 'TransMorphTVF_ncc_{}_diffusion_{}/'.format(weights[0], weights[1])
     if not os.path.exists('experiments/'+save_dir):
         os.makedirs('experiments/'+save_dir)
@@ -73,7 +73,7 @@ def main():
     '''
     Initialize training
     '''
-    train_set = datasets.L2RLUMIRDataset(data_path=train_dir, stage='train')
+    train_set = datasets.L2RLUMIRJSONDataset(base_dir=train_dir, json_path=train_dir+'LUMIR_dataset.json', stage='train')
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
 
     optimizer = optim.AdamW(model.parameters(), lr=updated_lr, weight_decay=0, amsgrad=True)
