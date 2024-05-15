@@ -1,4 +1,4 @@
-import os, utils, glob
+import os
 import sys
 from torch.utils.data import DataLoader
 from data import datasets
@@ -7,6 +7,7 @@ import torch
 from models.TransMorph import CONFIGS as CONFIGS_TM
 import models.TransMorph as TransMorph
 import torch.nn.functional as F
+from natsort import natsorted
 
 class Logger(object):
     def __init__(self, save_dir):
@@ -22,10 +23,10 @@ class Logger(object):
 
 def main():
     weights = [1, 1] # loss weights
-    val_dir = 'G:/DATA/L2R24_LUMIR/val/'
-    save_dir = 'TransMorphTVF_ncc_{}_diffusion_{}/'.format(weights[0], weights[1])
-    if not os.path.exists('outputs/'+save_dir):
-        os.makedirs('outputs/'+save_dir)
+    val_dir = 'G:/DATA/LUMIR/'
+    ptrain_wts_dir = 'TransMorphTVF_ncc_{}_diffusion_{}/'.format(weights[0], weights[1])
+    if not os.path.exists('outputs/'+ptrain_wts_dir):
+        os.makedirs('outputs/'+ptrain_wts_dir)
 
     '''
     Initialize model
@@ -36,22 +37,24 @@ def main():
     config.window_size = (H // 64, W // 64, D // 64)
     config.out_chan = 3
     model = TransMorph.TransMorphTVF(config, time_steps=7)
+    pretrained = torch.load('experiments/' + ptrain_wts_dir + natsorted(os.listdir('experiments/' + ptrain_wts_dir))[0])
+    model.load_state_dict(pretrained['state_dict'])
+    print('model: {} loaded!'.format(natsorted(os.listdir('experiments/' + ptrain_wts_dir))[0]))
     model.cuda()
 
     '''
     Initialize dataset
     '''
-    val_set = datasets.L2RLUMIRDataset(data_path=val_dir, stage='val')
+    val_set = datasets.L2RLUMIRJSONDataset(base_dir=val_dir, json_path=val_dir+'LUMIR_dataset.json', stage='validation')
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=4, pin_memory=True, drop_last=True)
-    val_files = val_set.pairs
+    val_files = val_set.imgs
     '''
     Validation
     '''
     with torch.no_grad():
         for i, data in enumerate(val_loader):
-            #print(val_files[0][i], val_files[1][i])
-            mv_id = val_files[0][i].split('_')[-1].split('.nii')[0]
-            fx_id = val_files[1][i].split('_')[-1].split('.nii')[0]
+            mv_id = val_files[i]['moving'].split('_')[-2]
+            fx_id = val_files[i]['fixed'].split('_')[-2]
             model.eval()
             x = data[0].cuda()
             y = data[1].cuda()
@@ -60,8 +63,8 @@ def main():
             flow = model((x_half, y_half))
             flow = F.interpolate(flow.cuda(), scale_factor=2, mode='trilinear', align_corners=False) * 2
             flow = flow.cpu().detach().numpy()[0]
-            np.savez('outputs/' + save_dir + 'disp_m{}_f{}.npz'.format(mv_id, fx_id), flow)
-            print('disp_m{}_f{}.npz saved to {}'.format(mv_id, fx_id, 'outputs/' + save_dir))
+            np.savez('outputs/' + ptrain_wts_dir + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
+            print('disp_{}_{}.npz saved to {}'.format(fx_id, mv_id, 'outputs/' + ptrain_wts_dir))
 
 if __name__ == '__main__':
     '''
