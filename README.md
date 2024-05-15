@@ -11,7 +11,17 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 - ***Image size:*** The dimensions of each image are `160 x 224 x 192`.
 - ***Normalization:*** Intensity values for each image volume have been normalized to fall within the range `[0,255]`.
 - ***Dataset structure:***
-    TBA
+    ```bash
+    LUMIR/imagesTr/------
+            LUMIRMRI_0000_0000.nii.gz   <--- a single brain T1 MR image
+            LUMIRMRI_0001_0000.nii.gz
+            LUMIRMRI_0002_0000.nii.gz
+            .......
+    LUMIR/imagesVal/------
+            LUMIRMRI_3454_0000.nii.gz
+            LUMIRMRI_3455_0000.nii.gz
+    ```
+- ***Dataset json file:*** [LUMIR_dataset.json](https://drive.google.com/uc?export=download&id=1b0hyH7ggjCysJG-VGvo38XVE8bFVRMxb)
 
 ## Baseline methods:
 1. VFA
