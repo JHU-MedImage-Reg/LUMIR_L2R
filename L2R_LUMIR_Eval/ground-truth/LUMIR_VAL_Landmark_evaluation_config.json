@@ -1,0 +1,60 @@
+{
+    "name": "LUMIR",
+    "evaluation_methods": [
+        {
+            "name": "Non-diffeomorphic Volumes",
+            "metric": "ndv"
+        },
+        {
+            "name": "TRE_lm",
+            "metric": "tre",
+            "dest": "landmarks"
+        }
+    ],
+    "expected_shape": [
+        160,
+        224,
+        192,
+        3
+    ],
+    "eval_pairs": [
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3485_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3484_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3486_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3485_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3487_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3486_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3488_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3487_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3489_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3488_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3490_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3489_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3491_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3490_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3492_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3491_0000.nii.gz"
+        },
+        {
+            "fixed": "./imagesVal/LUMIRMRI_3493_0000.nii.gz",
+            "moving": "./imagesVal/LUMIRMRI_3492_0000.nii.gz"
+        }
+    ],
+    "eval_config_version": 0.0,
+    "masked_evaluation": false
+}
