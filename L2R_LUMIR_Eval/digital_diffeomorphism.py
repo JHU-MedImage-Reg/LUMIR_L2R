@@ -1,3 +1,15 @@
+'''
+Digital Diffeomorphism for Deformation Regularity Quantification
+Paper:
+    Liu, Y., Chen, J., Wei, S., Carass, A. and Prince, J., 2024. 
+    On finite difference jacobian computation in deformable image registration. 
+    International Journal of Computer Vision, pp.1-11.
+Code:
+    https://github.com/yihao6/digital_diffeomorphism
+Author:
+    Yihao Liu, Ph.D.
+'''
+
 import nibabel as nib
 import numpy as np
 import os
