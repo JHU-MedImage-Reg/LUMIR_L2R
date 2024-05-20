@@ -64,12 +64,12 @@ def main():
             print('start registration: {}'.format(i))
             x_nib = nib.Nifti1Image(x, np.eye(4))
             x_nib.header.get_xyzt_units()
-            x_nib.header['pixdim'][1:4] = [1.5, 1.5, 1.5]
+            x_nib.header['pixdim'][1:4] = [1., 1., 1.]
             x_nib.to_filename('x.nii.gz')
 
             y_nib = nib.Nifti1Image(y, np.eye(4))
             y_nib.header.get_xyzt_units()
-            y_nib.header['pixdim'][1:4] = [1.5, 1.5, 1.5]
+            y_nib.header['pixdim'][1:4] = [1., 1., 1.]
             y_nib.to_filename('y.nii.gz')
 
             os.system('/mnt/d/pythonProject/deedsBCV_reg/deedsBCV/deedsBCV -F y.nii.gz -M x.nii.gz -O output -G 6x5x4x3x2 -L 6x5x4x3x2 -Q 5x4x3x2x1')
