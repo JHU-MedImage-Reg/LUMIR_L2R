@@ -207,7 +207,7 @@ int main (int argc, char * const argv[]) {
 	for(int i=0;i<sz;i++){
 		ddf[i]=ux[i]; ddf[i+sz]=vx[i]; ddf[i+sz*2]=wx[i];
 	}
-  gzWriteNifti("dense_disp_ux.nii.gz",ux,header,m,n,o,1);
+  	gzWriteNifti("dense_disp_ux.nii.gz",ux,header,m,n,o,1);
 	gzWriteNifti("dense_disp_vx.nii.gz",vx,header,m,n,o,1);
 	gzWriteNifti("dense_disp_wx.nii.gz",wx,header,m,n,o,1);
 	return 0;
