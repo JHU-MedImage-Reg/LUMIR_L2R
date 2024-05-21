@@ -72,7 +72,7 @@ def main():
             flow = nib_load('def.nii.gz')
             
             #np.savez('LUMIR_outputs/' + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
-            save_nii(flow, 'LUMIR_outputs/' + ptrain_wts_dir + 'disp_{}_{}')
+            save_nii(flow, 'LUMIR_outputs/' + 'disp_{}_{}'.format(fx_id, mv_id))
             print('disp_{}_{}.nii.gz saved to {}'.format(fx_id, mv_id, 'LUMIR_outputs/'))
 
 
