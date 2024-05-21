@@ -70,7 +70,7 @@ def main():
             flow = F.interpolate(flow.cuda(), scale_factor=2, mode='trilinear', align_corners=False) * 2
             flow = flow.cpu().detach().numpy()[0]
             #np.savez('outputs/' + ptrain_wts_dir + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
-            save_nii(flow, 'outputs/' + ptrain_wts_dir + 'disp_{}_{}')
+            save_nii(flow, 'outputs/' + ptrain_wts_dir + 'disp_{}_{}'.format(fx_id, mv_id))
             print('disp_{}_{}.nii.gz saved to {}'.format(fx_id, mv_id, 'outputs/' + ptrain_wts_dir))
 
 if __name__ == '__main__':
