@@ -71,7 +71,7 @@ def main():
             flow = flow.cpu().detach().numpy()[0]
             #np.savez('outputs/' + ptrain_wts_dir + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
             save_nii(flow, 'outputs/' + ptrain_wts_dir + 'disp_{}_{}')
-            print('disp_{}_{}.npz saved to {}'.format(fx_id, mv_id, 'outputs/' + ptrain_wts_dir))
+            print('disp_{}_{}.nii.gz saved to {}'.format(fx_id, mv_id, 'outputs/' + ptrain_wts_dir))
 
 if __name__ == '__main__':
     '''
