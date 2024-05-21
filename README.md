@@ -31,11 +31,21 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 5. deedsBCV ([Official website](https://github.com/mattiaspaul/deedsBCV) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/deedsBCV))
 6. UniGradICON
 
+***Results for baseline methods***
+|Model|Dice|TRE (mm)|NDV (%)|HdDist95|
+|---|---|---|---|---|
+|TransMorph|0.7594 ± 0.0319|2.4225|0.3509|3.5074|
+|SynthMorph|0.7243 ± 0.0294|2.6099|0.0000|3.5730|
+|deedsBCV|0.6977 ± 0.0274  |2.2230|0.0001|3.9540|
+|Initial |0.5657 ± 0.0263  |4.3543|0.0000|4.7876|
+
 ## Evaluation metrics:
 1. TRE ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L169-L197))
 2. Dice ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L155-L159))
 3. HD95 ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L162-L166))
-4. **Non-diffeomorphic volumes** ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L139-L152)) *See this [article](https://arxiv.org/abs/2212.06060) published in IJCV, and its associated [GitHub papge](https://github.com/yihao6/digital_diffeomorphism)* 
+4. **Non-diffeomorphic volumes (NDV)** ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L139-L152)) *See this [article](https://arxiv.org/abs/2212.06060) published in IJCV, and its associated [GitHub papge](https://github.com/yihao6/digital_diffeomorphism)* 
+
+
 
 ## Submission guidelines:
 We expect to provide displacement fields for all registrations in the The file naming format should be `disp_PatID1_PatID2`, where `PatID1` and `PatID2` represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
