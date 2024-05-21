@@ -38,11 +38,11 @@ def evaluate_L2R(INPUT_PATH, GT_PATH, OUTPUT_PATH, JSON_PATH, verbose=False):
         disp_lazy_name = f"disp_{fix_subject}_{mov_subject}"
         disp_full_name = f"disp_{fix_subject}_{fix_modality}_{mov_subject}_{mov_modality}"
         if (fix_modality == mov_modality or (fix_modality == '0000' and mov_modality == '0001')):
-            if os.path.isfile(os.path.join(INPUT_PATH, disp_lazy_name+'.npz')) or os.path.isfile(os.path.join(INPUT_PATH, disp_lazy_name+'.nii.gz')):
+            if os.path.isfile(os.path.join(INPUT_PATH, disp_lazy_name+'.nii.gz')):
                 continue
-        elif os.path.isfile(os.path.join(INPUT_PATH, disp_full_name+'.npz')) or os.path.isfile(os.path.join(INPUT_PATH, disp_full_name+'.nii.gz')):
+        elif os.path.isfile(os.path.join(INPUT_PATH, disp_full_name+'.nii.gz')):
             continue
-        raise_missing_file_error(disp_full_name+'[.nii.gz/.npz]')
+        raise_missing_file_error(disp_full_name+'.nii.gz')
 
     if verbose:
         print(
@@ -71,12 +71,12 @@ def evaluate_L2R(INPUT_PATH, GT_PATH, OUTPUT_PATH, JSON_PATH, verbose=False):
         corrfield_kpts_condition = (fix_modality == mov_modality or (fix_modality == '0000' and mov_modality == '0001'))
 
         if corrfield_kpts_condition:
-            for file in [disp_lazy_name+'.npz', disp_lazy_name+'.nii.gz']:
+            for file in [disp_lazy_name+'.nii.gz',]:
                 if os.path.isfile(os.path.join(INPUT_PATH, file)):
                     disp_field = load_disp(os.path.join(INPUT_PATH, file))
                     break
         else:
-            for file in [disp_full_name+'.npz', disp_full_name+'.nii.gz']:
+            for file in [disp_full_name+'.nii.gz',]:
                 if os.path.isfile(os.path.join(INPUT_PATH, file)):
                     disp_field = load_disp(os.path.join(INPUT_PATH, file))
                     break
@@ -142,6 +142,8 @@ def evaluate_L2R(INPUT_PATH, GT_PATH, OUTPUT_PATH, JSON_PATH, verbose=False):
                 mask = mask > 0
                 if disp_field.shape[0] != 3:
                     disp_field_ = disp_field.transpose(3, 0, 1, 2)
+                else:
+                    disp_field_ = np.copy(disp_field)
                 trans_ = disp_field_ + dd.get_identity_grid(disp_field_)
                 jac_dets = dd.calc_jac_dets(trans_)
                 non_diff_voxels, non_diff_tetrahedra, non_diff_volume, non_diff_volume_map = dd.calc_measurements(jac_dets, mask)
@@ -157,7 +159,7 @@ def evaluate_L2R(INPUT_PATH, GT_PATH, OUTPUT_PATH, JSON_PATH, verbose=False):
                 mean, detailed = compute_dice(
                     fixed_seg, moving_seg, warped_seg, labels)
                 case_results[_name] = {'mean': mean, 'detailed': detailed}
-                #print('case dice {:.4f}'.format(mean))
+                print('case dice {:.4f}'.format(mean))
             # HD95
             if 'hd95' == _eval['metric']:
                 labels = _eval['labels']
@@ -192,6 +194,7 @@ def evaluate_L2R(INPUT_PATH, GT_PATH, OUTPUT_PATH, JSON_PATH, verbose=False):
                 identity = np.meshgrid(np.arange(D), np.arange(H), np.arange(W), indexing='ij')
                 warped_mov_lms = map_coordinates(mov_lms, identity + disp_field.transpose(3, 0, 1, 2), order=0)
                 tre = calc_TRE(warped_mov_lms, fix_lms)
+                print(('landmark error (vox): after {}'.format(tre)))
                 mean = tre.mean()
                 detailed = tre.tolist()
                 case_results[_name] = {'mean': mean, 'detailed': detailed}
