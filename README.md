@@ -37,6 +37,21 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 3. HD95 ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L162-L166))
 4. **Non-diffeomorphic volumes** ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L139-L152)) *See this [article](https://arxiv.org/abs/2212.06060) published in IJCV, and its associated [GitHub papge](https://github.com/yihao6/digital_diffeomorphism)* 
 
+## Submission guidelines:
+We expect to provide displacement fields for all registrations in the The file naming format should be disp_PatID1_PatID2, where PatID1 and PatID2 represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
+```bash
+ folder.zip
+    ├── disp_3455_3454[.nii.gz/.npz]
+    ├── disp_3456_3455[.nii.gz/.npz]
+    ├── disp_3457_3456[.nii.gz/.npz]
+    ├── disp_3458_3457[.nii.gz/.npz]
+    ├── ...
+    └── ...
+```
+Submissions must be uploaded as zip file containing displacement fields (displacements only) for all validation pairs for all tasks (even when only participating in a subset of the tasks, in that case submit deformation fields of zeroes for all remaining tasks). You can find the validation pairs for in the LUMIR_dataset.json. The convention used for displacement fields depends on scipy's map_coordinates() function, expecting displacement fields in the format `[X, Y, Z,[x, y, z]]` or `[[x, y, z],X, Y, Z]`, where X, Y, Z and x, y, z represent voxel displacements and image dimensions, respectively. The evaluation script expects `.nii.gz` files using full-precision format and having shapes `160x224x196x3`. Further information can be found here.
+
+Note for PyTorch users: When using PyTorch as deep learning framework you are most likely to transform your images with the grid_sample() routine. Please be aware that this function uses a different convention than ours, expecting displacement fields in the format `[X, Y, Z,[x, y, z]]` or `[[x, y, z],X, Y, Z]` and normalized coordinates between -1 and 1. Prior to your submission you should therefore convert your displacement fields to match our convention.
+
 ## Citations for dataset usage:
 
     @article{dufumier2022openbhb,
