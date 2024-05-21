@@ -27,7 +27,13 @@ def csv_writter(line, name):
     with open(name+'.csv', 'a') as file:
         file.write(line)
         file.write('\n')
-
+            
+def save_nii(img, file_name, pix_dim=[1., 1., 1.]):
+    x_nib = nib.Nifti1Image(img, np.eye(4))
+    x_nib.header.get_xyzt_units()
+    x_nib.header['pixdim'][1:4] = pix_dim
+    x_nib.to_filename('{}.nii.gz'.format(file_name))
+        
 def main():
     val_dir = '/scratch/jchen/DATA/LUMIR/'
     if not os.path.exists('LUMIR_outputs/'):
@@ -65,8 +71,9 @@ def main():
             os.system('/scratch/jchen/python_projects/synthmorph/synthmorph -m deform -t def.nii.gz x.nii.gz y.nii.gz')
             flow = nib_load('def.nii.gz')
             
-            np.savez('LUMIR_outputs/' + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
-            print('disp_{}_{}.npz saved to {}'.format(fx_id, mv_id, 'LUMIR_outputs/'))
+            #np.savez('LUMIR_outputs/' + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
+            save_nii(flow, 'outputs/' + ptrain_wts_dir + 'disp_{}_{}')
+            print('disp_{}_{}.nii.gz saved to {}'.format(fx_id, mv_id, 'LUMIR_outputs/'))
 
 
 def seedBasic(seed=2021):
