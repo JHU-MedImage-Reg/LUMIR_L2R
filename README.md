@@ -40,11 +40,12 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 ## Submission guidelines:
 We expect to provide displacement fields for all registrations in the The file naming format should be `disp_PatID1_PatID2`, where `PatID1` and `PatID2` represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
 ```bash
- folder.zip
-    ├── disp_3455_3454[.nii.gz/.npz]
-    ├── disp_3456_3455[.nii.gz/.npz]
-    ├── disp_3457_3456[.nii.gz/.npz]
-    ├── disp_3458_3457[.nii.gz/.npz]
+folder.zip
+└── folder
+    ├── disp_3455_3454.nii.gz
+    ├── disp_3456_3455.nii.gz
+    ├── disp_3457_3456.nii.gz
+    ├── disp_3458_3457.nii.gz
     ├── ...
     └── ...
 ```
