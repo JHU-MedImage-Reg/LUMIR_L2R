@@ -30,6 +30,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 4. VoxelMorph
 5. deedsBCV ([Official website](https://github.com/mattiaspaul/deedsBCV) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/deedsBCV))
 6. UniGradICON
+7. BrainMorph ([Official website](https://github.com/alanqrwang/brainmorph) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/BrainMorph))
 
 ***Results for baseline methods***
 |Model|Dice|TRE (mm)|NDV (%)|HdDist95|
