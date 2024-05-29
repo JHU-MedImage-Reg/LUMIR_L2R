@@ -6,6 +6,9 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 ## Dataset: 
 - ***Download Training Dataset:*** Access the training dataset via Google Drive ([~52GB](https://drive.google.com/uc?export=download&id=1PTHAX9hZX7HBXXUGVvI1ar1LUf4aVbq9)).
+- ***Sanity Check:*** Since LUMIR focuses on unsupervised image registration, segmentation labels and landmarks for both the training and validation datasets are kept private. However, we provide a small subset to enable participants to perform sanity checks before submitting their results to the Grand Challenge.
+    - Segmentation labels for 5 images in the training dataset ([download](https://drive.google.com/uc?export=download&id=1zZjvUiRk3hlKJP7SH7QB3B_dj_RUUEIz))
+    - Manual landmarks for 10 images in the training dataset (TBA)
 - ***Preprocessing:*** The OpenBHB dataset underwent initial preprocessing by its creators, which included skull stripping and affine registration. For comprehensive details, refer to the [OpenBHB GitHub](https://baobablab.github.io/bhb/dataset) page and their [article](https://www.sciencedirect.com/science/article/pii/S1053811922007522). Subsequently, we performed N4 bias correction with ITK and intensity normalization using a [pre-existing tool](https://github.com/jcreinhold/intensity-normalization).
 - ***Annotation:*** We conducted segmentation of the anatomical structures using automated software. To enhance the dataset for evaluation purposes, an experienced radiologist and neurologist contributed manual landmark annotations to a subset of the images.
 - ***Image size:*** The dimensions of each image are `160 x 224 x 192`.
