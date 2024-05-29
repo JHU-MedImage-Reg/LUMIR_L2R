@@ -43,19 +43,11 @@ def nib_load(file_name):
     proxy.uncache()
     return data
 
-
-def csv_writter(line, name):
-    with open(name + '.csv', 'a') as file:
-        file.write(line)
-        file.write('\n')
-
-
 def save_nii(img, file_name, pix_dim=[1., 1., 1.]):
     x_nib = nib.Nifti1Image(img, np.eye(4))
     x_nib.header.get_xyzt_units()
     x_nib.header['pixdim'][1:4] = pix_dim
     x_nib.to_filename('{}.nii.gz'.format(file_name))
-
 
 def main():
     val_dir = 'F:/Junyu/DATA/LUMIR/'
