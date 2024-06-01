@@ -33,7 +33,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 ***Registration foundation models:***
 - SynthMorph ([Official website](https://martinos.org/malte/synthmorph/) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/SynthMorph))
-- UniGradICON
+- UniGradICON ([Official website](https://github.com/uncbiag/uniGradICON) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/uniGradICON))
 - BrainMorph ([Official website](https://github.com/alanqrwang/brainmorph) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/BrainMorph))
 
 ***Optimization-based methods:***
