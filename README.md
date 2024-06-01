@@ -109,9 +109,12 @@ Note for PyTorch users: When using PyTorch as deep learning framework you are mo
 
 If you have used **Non-diffeomorphic volumes** in the evaluation of the deformation regularity, please cite the following:
 
-    @article{liu2022finite,
-    title={On finite difference jacobian computation in deformable image registration},
-    author={Liu, Yihao and Chen, Junyu and Wei, Shuwen and Carass, Aaron and Prince, Jerry},
-    journal={arXiv preprint arXiv:2212.06060},
-    year={2022}
+    @article{liu2024finite,
+      title={On finite difference jacobian computation in deformable image registration},
+      author={Liu, Yihao and Chen, Junyu and Wei, Shuwen and Carass, Aaron and Prince, Jerry},
+      journal={International Journal of Computer Vision},
+      pages={1--11},
+      year={2024},
+      publisher={Springer}
     }
+
