@@ -40,7 +40,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 - deedsBCV ([Official website](https://github.com/mattiaspaul/deedsBCV) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/deedsBCV))
 
 ***Results for baseline methods***
-|Model|Dice|TRE (mm)|NDV (%)|HdDist95|
+|Model|Dice↑|TRE↓ (mm)|NDV↓ (%)|HdDist95↓|
 |---|---|---|---|---|
 |TransMorph|0.7594 ± 0.0319|2.4225|0.3509|3.5074|
 |uniGradICON (w/ IO)|0.7512 ± 0.0366|2.4514|0.0001|3.5080|
