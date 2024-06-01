@@ -43,7 +43,8 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 |Model|Dice|TRE (mm)|NDV (%)|HdDist95|
 |---|---|---|---|---|
 |TransMorph|0.7594 ± 0.0319|2.4225|0.3509|3.5074|
-|uniGradICON|0.7369 ± 0.0412|2.5733|0.0000|3.6102|
+|uniGradICON (w/ IO)|0.7512 ± 0.0366|2.4514|0.0001|3.5080|
+|uniGradICON (w/o IO)|0.7369 ± 0.0412|2.5733|0.0000|3.6102|
 |SynthMorph|0.7243 ± 0.0294|2.6099|0.0000|3.5730|
 |deedsBCV|0.6977 ± 0.0274  |2.2230|0.0001|3.9540|
 |Initial |0.5657 ± 0.0263  |4.3543|0.0000|4.7876|
@@ -57,7 +58,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 
 
 ## Submission guidelines:
-We expect to provide displacement fields for all registrations in the The file naming format should be `disp_PatID1_PatID2`, where `PatID1` and `PatID2` represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
+We expect to provide displacement fields for all registrations in the file naming format should be `disp_PatID1_PatID2`, where `PatID1` and `PatID2` represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
 ```bash
 folder.zip
 └── folder
