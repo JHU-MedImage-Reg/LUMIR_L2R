@@ -37,7 +37,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 - BrainMorph ([Official website](https://github.com/alanqrwang/brainmorph) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/BrainMorph))
 
 ***Optimization-based methods:***
-- SyN (ATNs) ([Official website](https://github.com/ANTsX/ANTsPy)) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/SyN))
+- SyN (ATNs) ([Official website](https://github.com/ANTsX/ANTsPy)) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/SyN%20(ATNs)))
 - deedsBCV ([Official website](https://github.com/mattiaspaul/deedsBCV) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/deedsBCV))
 
 ***Validation dataset results for baseline methods***
