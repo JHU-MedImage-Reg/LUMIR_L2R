@@ -27,7 +27,13 @@ class Logger(object):
 
     def flush(self):
         pass
-
+            
+def save_nii(img, file_name, pix_dim=[1., 1., 1.]):
+    x_nib = nib.Nifti1Image(img, np.eye(4))
+    x_nib.header.get_xyzt_units()
+    x_nib.header['pixdim'][1:4] = pix_dim
+    x_nib.to_filename('{}.nii.gz'.format(file_name))
+        
 def main():
     weights = [1, 1] # loss weights
     val_dir = 'G:/DATA/LUMIR/'
@@ -64,8 +70,8 @@ def main():
             net_in = torch.cat((x, y), dim=1)
             output, flow = model(net_in)
             flow = flow.cpu().detach().numpy()[0]
-            np.savez('outputs/' + ptrain_wts_dir + 'disp_{}_{}.npz'.format(fx_id, mv_id), flow)
-            print('disp_{}_{}.npz saved to {}'.format(fx_id, mv_id, 'outputs/' + ptrain_wts_dir))
+            save_nii(flow, 'outputs/' + ptrain_wts_dir + 'disp_{}_{}'.format(fx_id, mv_id))
+            print('disp_{}_{}.nii.gz saved to {}'.format(fx_id, mv_id, 'outputs/' + ptrain_wts_dir))
 
 if __name__ == '__main__':
     '''
