@@ -48,6 +48,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 |uniGradICON (w/ IO)|0.7512 ± 0.0366|2.4514|0.0001|3.5080|
 |uniGradICON (w/o IO)|0.7369 ± 0.0412|2.5733|0.0000|3.6102|
 |SynthMorph|0.7243 ± 0.0294|2.6099|0.0000|3.5730|
+|VoxelMorph|0.7186 ± 0.0340|3.1545|1.1836|3.9821|
 |SyN (ATNs)|0.6988 ± 0.0561  |2.6497|0.0000|3.7048|
 |deedsBCV|0.6977 ± 0.0274  |2.2230|0.0001|3.9540|
 |Initial |0.5657 ± 0.0263  |4.3543|0.0000|4.7876|
