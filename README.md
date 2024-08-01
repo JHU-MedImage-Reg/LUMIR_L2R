@@ -59,8 +59,8 @@ The ranking process involved normalizing the scores using the Min-Max normalizat
 &nbsp;&nbsp;&nbsp;&nbsp;`scores = (scores - min(scores)) / (max(scores) - min(scores))`.\
 For the TRE, NDV, and HdDist95 metrics, the formula was adjusted to account for the preference for lower scores:\
 &nbsp;&nbsp;&nbsp;&nbsp;`scores = (max(scores) - scores) / (max(scores) - min(scores))`.\
-After normalization, the scores were aggregated into a weighted average, calculated as follows: 1/6 of the normalized Dice score and 1/6 of the normalized HdDist95 score, reflecting their shared basis in segmentation labels. The TRE and NDV scores, evaluated independently, were each assigned a weight of 1/3. This weighting scheme ensures that each metric contributes proportionally to the final ranking, with separate evaluations for segmentation-based metrics, landmark-based metric, and the deformation regularity assessment.
-
+After normalization, the scores were aggregated into a weighted average, calculated as follows: 1/6 of the normalized Dice score and 1/6 of the normalized HdDist95 score, reflecting their shared basis in segmentation labels. The TRE and NDV scores, evaluated independently, were each assigned a weight of 1/3. This weighting scheme ensures that each metric contributes proportionally to the final ranking, with separate evaluations for segmentation-based metrics, landmark-based metric, and the deformation regularity assessment.\
+&nbsp;&nbsp;&nbsp;&nbsp;`Average Score=1/6*Norm. Dice + 1/6*Norm. HdDist95 + 1/3*Norm. TRE + 1/3*Norm. NDV`
 ## Baseline methods:
 ***Learning-based models:***
 - VFA
