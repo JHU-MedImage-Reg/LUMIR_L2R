@@ -26,7 +26,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
     ```
 - ***Dataset json file:*** [LUMIR_dataset.json](https://drive.google.com/uc?export=download&id=1b0hyH7ggjCysJG-VGvo38XVE8bFVRMxb)
 
-## Snapshot Ranks (updated: 07/31/2024):
+## Snapshot Rank (updated: 07/31/2024):
 |Author|Normalized Dice|Normalized TRE|Normalized NDV|Normalized HdDist95|Average Score|Rank|
 |---|---|---|---|---|---|---|
 | honkamj |1.0000|0.9988|0.9960|0.9375|0.9879|1.0|
@@ -54,7 +54,7 @@ Please visit [https://learn2reg.grand-challenge.org/](https://learn2reg.grand-ch
 | CDSN_Cyz  (CDSN)|0.2109|0.3372|0.8287|0.1644|0.4512|23.0|
 | mysterious_man |0.3482|0.6542|0.3465|0.1304|0.4133|24.0|
 
-***Ranking Method***\
+***Ranking Method:***\
 The ranking process involved normalizing the scores using the Min-Max normalization technique. For the Dice metric, the normalization was performed with the formula:\
 &nbsp;&nbsp;&nbsp;&nbsp;`scores = (scores - min(scores)) / (max(scores) - min(scores))`.\
 For the TRE, NDV, and HdDist95 metrics, the formula was adjusted to account for the preference for lower scores:\
