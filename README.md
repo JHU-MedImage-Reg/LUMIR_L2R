@@ -2,7 +2,7 @@
 This official repository houses baseline methods, training scripts, and pretrained models for the LUMIR challenge at Learn2Reg 2024.\
 The challenge is dedicated to ***unsupervised*** brain MRI image registration and offers a comprehensive dataset of over 4000 preprocessed T1-weighted 3D brain MRI images, available for training, testing, and validation purposes.
 
-Please visit [https://learn2reg.grand-challenge.org/](learn2reg.grand-challenge.org/) for more information.
+Please visit ***learn2reg.grand-challenge.org*** for more information.
 
 ## Dataset: 
 - ***Download Training Dataset:*** Access the training dataset via Google Drive ([~52GB](https://drive.google.com/uc?export=download&id=1PTHAX9hZX7HBXXUGVvI1ar1LUf4aVbq9)).
