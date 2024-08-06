@@ -26,45 +26,6 @@ Please visit ***learn2reg.grand-challenge.org*** for more information.
     ```
 - ***Dataset json file:*** [LUMIR_dataset.json](https://drive.google.com/uc?export=download&id=1b0hyH7ggjCysJG-VGvo38XVE8bFVRMxb)
 
-## Snapshot Rank (updated: 07/31/2024):
-|Author|Normalized Dice|Normalized TRE|Normalized NDV|Normalized HdDist95|Average Score|Rank|
-|---|---|---|---|---|---|---|
-| honkamj |1.0000|0.9636|0.9991|0.9639|0.9815|1.0|
-| hnuzyx  (next-gen-nn)|0.9948|0.9535|1.0000|0.9512|0.9755|2.0|
-| tsubasaz025  (DutchMasters)|0.9583|0.9623|0.9999|0.9529|0.9726|3.0|
-| 793407238  (MadeForLife)|0.9740|0.9638|0.9987|0.9212|0.9700|4.0|
-| Wjiazheng  (next-gen-nn)|0.9911|0.9444|0.9947|0.9432|0.9688|5.0|
-| lie_weaver  (MadeForLife)|0.9891|0.9526|0.9901|0.9298|0.9674|6.0|
-| windforever118  (next-gen-nn)|0.9953|0.9338|0.9928|0.9399|0.9647|7.0|
-| yihaol |0.9917|0.8877|0.9969|1.0000|0.9602|8.0|
-| zhuoyuanw210 |0.9661|0.9156|0.9982|0.9438|0.9563|9.0|
-| Bailiang |0.9281|0.9514|0.9992|0.9080|0.9562|10.0|
-| cwmokab  (Orange)|0.9521|0.9113|0.9878|0.9248|0.9458|11.0|
-| LYU-zhouhu  (LYU1)|0.9714|0.8793|0.9984|0.9416|0.9447|12.0|
-| jchen245  (Challenge Organizers)|0.9229|0.9176|0.9863|0.8835|0.9357|13.0|
-| Sparkling_Poetry  (MadeForLife)|0.9583|0.8932|0.9791|0.9023|0.9342|14.0|
-| zahid_aziz |0.9240|0.8982|0.9877|0.8907|0.9311|15.0|
-| lukasf |0.9203|0.9049|0.9856|0.8810|0.9304|16.0|
-| Jczzz |0.9005|0.9248|0.9810|0.8641|0.9294|17.0|
-| yyxbuaa |0.9208|0.8893|0.9889|0.8900|0.9279|18.0|
-| Moxnie  (VROC)|0.9156|0.9077|0.9527|0.8615|0.9163|19.0|
-| 1063331689 |0.9005|0.8940|0.9712|0.8581|0.9148|20.0|
-| tinymilky  (next-gen-nn)|0.9688|0.9284|0.8825|0.8933|0.9140|21.0|
-| TS_UKE  (VROC)|0.8521|0.8875|0.9992|0.8294|0.9091|22.0|
-| dericdesta  (VROC)|0.8719|0.8585|0.9973|0.8158|0.8999|23.0|
-| lintian |0.8057|0.8553|1.0000|0.8428|0.8932|24.0|
-| CDSN_Cyz  (CDSN)|0.8714|0.8493|0.9613|0.8104|0.8838|25.0|
-| mysterious_man |0.8938|0.9040|0.8525|0.8036|0.8684|26.0|
-| meeem  (VROC)|0.8297|0.7823|0.9970|0.7848|0.8622|27.0|
-| ethxiali  (ETH)|0.7083|0.7856|0.9147|0.7297|0.8064|28.0|
-
-***Ranking Method:***\
-The ranking process involved normalizing the scores using the Min-Max normalization technique. For the Dice metric, the normalization was performed with the formula:\
-&nbsp;&nbsp;&nbsp;&nbsp;`scores = (scores - min(scores)) / (max(scores) - min(scores))`.\
-For the TRE, NDV, and HdDist95 metrics, the formula was adjusted to account for the preference for lower scores:\
-&nbsp;&nbsp;&nbsp;&nbsp;`scores = (max(scores) - scores) / (max(scores) - min(scores))`.\
-After normalization, the scores were aggregated into a weighted average, calculated as follows: 1/6 of the normalized Dice score and 1/6 of the normalized HdDist95 score, reflecting their shared basis in segmentation labels. The TRE and NDV scores, evaluated independently, were each assigned a weight of 1/3. This weighting scheme ensures that each metric contributes proportionally to the final ranking, with separate evaluations for segmentation-based metrics, landmark-based metric, and the deformation regularity assessment.\
-&nbsp;&nbsp;&nbsp;&nbsp;`Average Score=1/6*Norm. Dice + 1/6*Norm. HdDist95 + 1/3*Norm. TRE + 1/3*Norm. NDV`
 ## Baseline methods:
 ***Learning-based models:***
 - VFA
