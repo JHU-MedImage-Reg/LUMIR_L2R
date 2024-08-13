@@ -8,6 +8,7 @@ from models.TransMorph import CONFIGS as CONFIGS_TM
 import models.TransMorph as TransMorph
 import torch.nn.functional as F
 from natsort import natsorted
+import nibabel as nib
 
 class Logger(object):
     def __init__(self, save_dir):
