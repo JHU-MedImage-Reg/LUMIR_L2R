@@ -62,6 +62,19 @@ $${\color{red}New!}$$ Test phase submission is available, see [this section](#te
 4. **Non-diffeomorphic volumes (NDV)** ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/c19670ba91f1cffb33bdfff040daa42bfbf72058/L2R_LUMIR_Eval/evaluation.py#L139-L154)) *See this [article](https://link.springer.com/article/10.1007/s11263-024-02047-1) published in IJCV, and its associated [GitHub papge](https://github.com/yihao6/digital_diffeomorphism)* 
 
 ## Test Phase Submission Guidelines:
+The test set consists of 590 images, making it impractical to distribute and collect the deformation fields. As a result, the test set will not be made available to challenge participants. Instead, **participants are required to containerize their methods with Docker and submit their Docker containers for evaluation.** Your code won't be shared and will be only used internally by the Learn2Reg organizers.
+
+Docker allows for running an algorithm in an isolated environment called a container.  In particular, this container will locally replicate your pipeline requirements and execute your inference script.
+
+Detailed instructions on how to build your Docker container is availble at `learn2reg.grand-challenge.org/lumir-test-phase-submission/`\
+**We have provided examples and templates for creating a Docker image for submission on our [GitHub](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/Test_phase_submission). You may find it helpful to start with the example Docker submission we created for TransMorph (available [here](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/Test_phase_submission/DockerImage_TransMorph)), or you can start from a blank template (available [here](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/Test_phase_submission/DockerImage_Template)).**
+
+You will need to submit by **31st August 2024** to **jchen245 [at] jhmi.edu**:
+* Please choose **ONE** of the following:
+    * **EITHER** Email the download link for your Docker container to jchen245 [at] jhmi.edu
+    * **OR** Upload your Docker container here.
+* Additionally, please email the requirements for running your algorithm, including the number of CPUs, amount of RAM, and the estimated computation time per subject.
+* Please ensure that your Docker container is named in a way that clearly identifies it as your submission.
 
 ## Submission guidelines:
 We expect to provide displacement fields for all registrations in the file naming format should be `disp_PatID1_PatID2`, where `PatID1` and `PatID2` represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
