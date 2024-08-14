@@ -4,7 +4,7 @@ The challenge is dedicated to ***unsupervised*** brain MRI image registration an
 
 Please visit ***learn2reg.grand-challenge.org*** for more information.
 
-$${\color{red}New!}$$ Test phase submission is available, see [this section](#test_phase_submission_guidelines)!
+$${\color{red}New!}$$ Test phase submission is available, see [this section](#test-phase-submission-guidelines)!
 
 ## Dataset: 
 - ***Download Training Dataset:*** Access the training dataset via Google Drive ([~52GB](https://drive.google.com/uc?export=download&id=1PTHAX9hZX7HBXXUGVvI1ar1LUf4aVbq9)).
