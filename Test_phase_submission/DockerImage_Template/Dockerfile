@@ -6,6 +6,7 @@ RUN mkdir -p /input /output /json_dir
 
 COPY ./requirements.txt .
 COPY ./infer_script.py .
+COPY ./pretrained_weights pretrained_weights/
 
 RUN pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cpu
 RUN python3 -m pip install --user -r requirements.txt
