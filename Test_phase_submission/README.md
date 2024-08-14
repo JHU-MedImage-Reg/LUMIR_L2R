@@ -11,3 +11,9 @@ After placing the pretrained weights, follow these steps:
   * Make sure to update this section of the `test.sh` script: https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/8ce441d3f8110c8a68eeda2113bdeff977ce01f6/Test_phase_submission/DockerImage_TransMorph/test.sh#L8-L10 according to the paths for the `.json` dataset file (available [here](https://drive.google.com/uc?export=download&id=1b0hyH7ggjCysJG-VGvo38XVE8bFVRMxb)) and the input and output directories.
 
 You can also test the pre-built Docker image provided by us. Simply download the Docker image [here](https://drive.google.com/uc?export=download&id=1DVipRZg9GVxQU67D_NgUkRDpQpNBMLnK) and run `bash test.sh` in the same directory.
+
+
+Some useful commands to free your disk space if too many Docker images are built:\
+`docker rmi -f $(docker images -aq) #delete all containers`\
+`docker rm -vf $(docker ps -aq) #delete all containers including its volumes`\
+`docker system prune #delete everything`
