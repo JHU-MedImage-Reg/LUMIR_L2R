@@ -1,6 +1,6 @@
 # Test phase Docker submission examples and templates for LUMIR challenge
 
-For detailed instructions, please visit: https://learn2reg.grand-challenge.org/lumir-test-phase-submission/. Please note that this webpage is accessible only to participants.
+For detailed instructions, please visit: https://learn2reg.grand-challenge.org/lumir-test-phase-submission/ . Please note that this webpage is accessible only to participants.
 
 To successfully run the TransMorph example for building, exporting, and testing the Docker image, you need to download the pretrained weights (available [here](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry)) and place them in the DockerImage_TransMorph/pretrained_weights/ directory.
 
