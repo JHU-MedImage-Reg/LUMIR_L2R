@@ -2,7 +2,7 @@
 
 For detailed instructions, please visit: `learn2reg.grand-challenge.org/lumir-test-phase-submission/`. Please note that this webpage is accessible only to participants.
 
-**To successfully run the TransMorph example for building, exporting, and testing the Docker image, you need to download the pretrained weights (available [here](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry)) and place them in the DockerImage_TransMorph/pretrained_weights/ directory.**
+**To successfully run the TransMorph example for building, exporting, and testing the Docker image, you need to download the pretrained weights (available [here](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry)) and place them in the `DockerImage_TransMorph/pretrained_weights/` directory.**
 
 After placing the pretrained weights, follow these steps:
 * Run `bash build.sh` to build the Docker image for the TransMorph inference script. [[code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/main/Test_phase_submission/DockerImage_TransMorph/build.sh)]
