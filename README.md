@@ -69,12 +69,24 @@ Docker allows for running an algorithm in an isolated environment called a conta
 Detailed instructions on how to build your Docker container is availble at `learn2reg.grand-challenge.org/lumir-test-phase-submission/`\
 **We have provided examples and templates for creating a Docker image for submission on our [GitHub](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/Test_phase_submission). You may find it helpful to start with the example Docker submission we created for TransMorph (available [here](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/Test_phase_submission/DockerImage_TransMorph)), or you can start from a blank template (available [here](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/Test_phase_submission/DockerImage_Template)).**
 
-You will need to submit by **31st August 2024** to **jchen245 [at] jhmi.edu**:
-* Please choose **ONE** of the following:
-    * **EITHER** Email the download link for your Docker container to jchen245 [at] jhmi.edu
-    * **OR** Upload your Docker container here.
-* Additionally, please email the requirements for running your algorithm, including the number of CPUs, amount of RAM, and the estimated computation time per subject.
-* Please ensure that your Docker container is named in a way that clearly identifies it as your submission.
+Your submission should be a single `.zip` file containing the following things:
+```bash
+LUMIR_[your Grand Challenge username]_TestPhase.zip
+└── [your docker image name].tar.gz <------ #Your Docker container
+└── README.txt                      <------ #A description of the requirements for running your model, including the number of CPUs, amount of RAM, and the estimated computation time per subject.
+└── validation_predictions.zip      <------ #A .zip file containing the predicted displacement fields for the validation dataset, ensuring the format adheres to ones outlined at this page.
+    ├── disp_3455_3454.nii.gz
+    ├── disp_3456_3455.nii.gz
+    ├── disp_3457_3456.nii.gz
+    ├── disp_3458_3457.nii.gz
+    ├── ...
+    └── ...
+```
+You will need to submit by **31st August 2024**
+
+Please choose **ONE** of the following:
+* **EITHER** Email the download link for your `.zip` file to **jchen245 [at] jhmi.edu**
+* **OR** Upload your .zip file here.
 
 ## Submission guidelines:
 We expect to provide displacement fields for all registrations in the file naming format should be `disp_PatID1_PatID2`, where `PatID1` and `PatID2` represent the subject IDs for the fixed and moving images, respectively. The evaluation process requires the files to be organized in the following structure:
