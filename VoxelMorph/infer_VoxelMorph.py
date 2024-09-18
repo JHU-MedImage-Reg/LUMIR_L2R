@@ -15,6 +15,7 @@ import torch
 from models import VxmDense_1, VxmDense_2, VxmDense_huge
 import torch.nn.functional as F
 from natsort import natsorted
+import nibabel as nib
 
 class Logger(object):
     def __init__(self, save_dir):
