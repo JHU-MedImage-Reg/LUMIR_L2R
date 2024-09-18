@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader
 from data import datasets
 import numpy as np
 import torch
-from models import VxmDense_1, VxmDense_2, VxmDense_huge
+from models import VxmDense_1, VxmDense_2
 import torch.nn.functional as F
 from natsort import natsorted
 import nibabel as nib
