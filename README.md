@@ -32,7 +32,7 @@ $${\color{red}New!}$$ - 08/14/2024 - Test phase submission is available, see [th
 
 ## Baseline methods:
 ***Learning-based models:***
-- VFA ([Official website](https://github.com/yihao6/vfa))
+- Vector Field Attention ([Official website](https://github.com/yihao6/vfa))
 - TransMorph ([Official website](https://github.com/junyuchen245/TransMorph_Transformer_for_Medical_Image_Registration) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/TransMorph)  | [Pretrained weights (~355MB)](https://drive.google.com/uc?export=download&id=1SSqI88l1MdrPJgE4Rn8pqXnVfZNPxtry))
 - VoxelMorph ([Official website](https://github.com/voxelmorph/voxelmorph) | [Scripts](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/tree/main/VoxelMorph)  | [Pretrained weights (~83MB)](https://drive.google.com/uc?export=download&id=1imUkWtf_15Ih2rxPTKfwuIP04eKr9S9H))
 
@@ -48,6 +48,7 @@ $${\color{red}New!}$$ - 08/14/2024 - Test phase submission is available, see [th
 ***Validation dataset results for baseline methods***
 |Model|Dice↑|TRE↓ (mm)|NDV↓ (%)|HdDist95↓|
 |---|---|---|---|---|
+|VFA| 0.7726 ± 0.0286 | 2.4949 | 0.0788 | 3.2127|
 |TransMorph|0.7594 ± 0.0319|2.4225|0.3509|3.5074|
 |uniGradICON (w/ IO)|0.7512 ± 0.0366|2.4514|0.0001|3.5080|
 |uniGradICON (w/o IO)|0.7369 ± 0.0412|2.5733|0.0000|3.6102|
