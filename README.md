@@ -83,7 +83,7 @@ $${\color{red}New!}$$ - 10/07/2024 - Test phase ranking is available here [this 
 |VoxelMorph                    |✗|<p align=center><sup>3.5282 ± 4.32</sup></p>|   <p align=center><sup>0.7144 ± 0.14</sup></p>|   <p align=center><sup>4.0718 ± 2.79</sup></p>|   <p align=center><sup>1.2167 ± 0.27</sup></p>|   0.157|20|[GitHub](https://github.com/voxelmorph/voxelmorph)|
 |ZeroDisplacement              |✗|<p align=center><sup>4.3841 ± 4.33</sup></p>|   <p align=center><sup>0.5549 ± 0.17</sup></p>|   <p align=center><sup>4.9148 ± 2.50</sup></p>|   <p align=center><sup>0.0000 ± 0.00</sup></p>|   0.157|20|-|
 
-*: ***ISOstands for Instance-specific Optimization***
+*: ***ISO*** *stands for Instance-specific Optimization*
 ## Evaluation metrics:
 1. TRE ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L169-L197))
 2. Dice ([Code](https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/2e98e0f936d2806ba2e40cbbd78a36219e4f9610/L2R_LUMIR_Eval/evaluation.py#L155-L159))
