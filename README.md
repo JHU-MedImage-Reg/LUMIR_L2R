@@ -6,7 +6,7 @@ The challenge is dedicated to ***unsupervised*** brain MRI image registration an
 
 Please visit ***learn2reg.grand-challenge.org*** for more information.
 
-$${\color{red}New!}$$ - 10/07/2024 - Test phase ranking is available here [this section](#test-phase-results), congrats to the winners!!\
+$${\color{red}New!}$$ - 10/07/2024 - Test phase ranking is available here [this section](#https://github.com/JHU-MedImage-Reg/LUMIR_L2R/blob/main/README.md#-test-phase-results), congrats to the winners!!\
 08/14/2024 - Test phase submission is available, see [this section](#test-phase-submission-guidelines)!
 
 ## Dataset: 
