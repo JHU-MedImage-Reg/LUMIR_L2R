@@ -58,7 +58,7 @@ $${\color{red}New!}$$ - 10/07/2024 - Test phase ranking is available here [this 
 |deedsBCV|0.6977 ± 0.0274  |2.2230|0.0001|3.9540|
 |Initial |0.5657 ± 0.0263  |4.3543|0.0000|4.7876|
 
-## Test phase results
+## <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30"> Test phase results:
 |team|ISO*?|TRE↓ (mm)|Dice↑|HdDist95↓|NDV↓ (%)|Score|Rank|GitHub|
 |---|---|---|---|---|---|---|---|---|
 |honkamj                       |✗|<p align=center><sup>3.0878 ± 4.17</sup></p>|   <p align=center><sup>0.7851 ± 0.11</sup></p>|   <p align=center><sup>3.0352 ± 2.41</sup></p>|   <p align=center><sup>0.0025 ± 0.00</sup></p>|   0.814|1|[GitHub](https://github.com/honkamj/SITReg)|
