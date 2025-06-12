@@ -6,6 +6,7 @@ The challenge is dedicated to ***unsupervised*** brain MRI image registration an
 
 Please visit ***learn2reg.grand-challenge.org*** for more information.
 
+$${\color{red}New!}$$ - 06/01/2025 - Check out our preprint summarizing LUMIR 2024 -> [![arXiv](https://img.shields.io/badge/arXiv-2505.24160-b31b1b.svg)](https://arxiv.org/abs/2505.24160)\
 $${\color{red}New!}$$ - 10/07/2024 - Test phase ranking is available here [this section](#-test-phase-results), congrats to the winners!!\
 08/14/2024 - Test phase submission is available, see [this section](#test-phase-submission-guidelines)!
 
