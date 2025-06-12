@@ -136,6 +136,13 @@ Note for PyTorch users: When using PyTorch as deep learning framework you are mo
 
 ## Citations for dataset usage:
 
+    @article{chen2025beyond,
+    title={Beyond the LUMIR challenge: The pathway to foundational registration models},
+    author={Chen, Junyu and Wei, Shuwen and Honkamaa, Joel and Marttinen, Pekka and Zhang, Hang and Liu, Min and Zhou, Yichao and Tan, Zuopeng and Wang, Zhuoyuan and Wang, Yi and others},
+    journal={arXiv preprint arXiv:2505.24160},
+    year={2025}
+    }
+    
     @article{dufumier2022openbhb,
     title={Openbhb: a large-scale multi-site brain mri data-set for age prediction and debiasing},
     author={Dufumier, Benoit and Grigis, Antoine and Victor, Julie and Ambroise, Corentin and Frouin, Vincent and Duchesnay, Edouard},
